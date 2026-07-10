@@ -21,11 +21,13 @@
 <meta property="og:url" content="https://victoryjs.github.io/vijay-chouhan/projects.html">
 <meta property="og:title" content="Projects | Vijay Chouhan">
 <meta property="og:description" content="Selected projects by Vijay Chouhan spanning PropTech, SaaS, event-ticketing, and FinTech platforms.">
-<meta property="og:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/profile/vijay-chouhan.jpeg">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects | Vijay Chouhan">
 <meta name="twitter:description" content="Selected projects by Vijay Chouhan spanning PropTech, SaaS, event-ticketing, and FinTech platforms.">
-<meta name="twitter:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/profile/vijay-chouhan.jpeg">
+<meta name="twitter:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/og-banner.png">
 <link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/images/icons/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/images/icons/favicon-16.png" type="image/png" sizes="16x16">
@@ -79,11 +81,29 @@
     <div class="container">
       <div class="project-grid">
 
-        <article class="project-card card reveal">
+        <article class="project-card card reveal" id="habitake">
           <div class="project-card__media project-card__media--1"><span>Habitake</span></div>
           <div class="project-card__body">
-            <h3>Habitake — Cloud-Native Property Management Ecosystem</h3>
-            <p>A high-performance, cloud-native property management and social ecosystem built on AWS using a serverless microservices architecture, with Google Gemini generative AI for image creation.</p>
+            <div class="case-study__header">
+              <h3>Habitake — Cloud-Native Property Management Ecosystem</h3>
+              <span class="case-study__badge">Private Client Project</span>
+            </div>
+            <div class="case-study__section">
+              <h4>Challenge</h4>
+              <p>Build a high-performance property management and social ecosystem capable of handling AI-driven and location-based features at scale, without managing traditional servers.</p>
+            </div>
+            <div class="case-study__section">
+              <h4>My Role</h4>
+              <p>Architected the backend platform as serverless microservices on AWS, choosing Rust for performance-critical logic and Node.js for AI integration.</p>
+            </div>
+            <div class="case-study__section case-study__achievements">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Designed a serverless microservices architecture on AWS (Lambda, AppSync/GraphQL, DynamoDB single-table design, Cognito auth, S3, SQS async processing, OpenSearch)</li>
+                <li>Integrated Google Gemini generative AI for automated image creation</li>
+                <li>Set up CI/CD via GitHub Actions with Dependabot for automated dependency updates</li>
+              </ul>
+            </div>
             <div class="tag-row">
               <span class="tag">Rust</span>
               <span class="tag">Node.js</span>
@@ -97,11 +117,31 @@
           </div>
         </article>
 
-        <article class="project-card card reveal">
+        <article class="project-card card reveal" id="sootra">
           <div class="project-card__media project-card__media--2"><span>Sootra</span></div>
           <div class="project-card__body">
-            <h3>Sootra — SaaS Platform &amp; Admin Dashboard</h3>
-            <p>A scalable dual-frontend web application featuring a user-facing productivity portal and a robust admin dashboard, with Monaco Editor and GrapesJS integrations plus real-time updates via Socket.io.</p>
+            <div class="case-study__header">
+              <h3>Sootra — SaaS Platform &amp; Admin Dashboard</h3>
+              <span class="case-study__badge">Private Client Project</span>
+            </div>
+            <div class="case-study__section">
+              <h4>Challenge</h4>
+              <p>Deliver a dual-frontend SaaS product — a user-facing productivity portal and a separate admin dashboard — needing advanced content-editing tools and real-time data, without duplicating code between the two apps.</p>
+            </div>
+            <div class="case-study__section">
+              <h4>My Role</h4>
+              <p>Architected and maintained both React applications, keeping design patterns and code reusable, and integrated the most complex third-party tooling (Monaco Editor, GrapesJS, real-time sockets).</p>
+            </div>
+            <div class="case-study__section case-study__achievements">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Architected two React applications (User Frontend &amp; Admin Dashboard) sharing consistent design patterns and reusable code</li>
+                <li>Integrated Monaco Editor (VS Code engine) for code workflows and GrapesJS for drag-and-drop page building</li>
+                <li>Implemented Redux Toolkit and React Query for complex client state and server-state caching/optimistic updates</li>
+                <li>Configured ESLint, Prettier, Husky pre-commit hooks, and SonarQube static analysis for code quality</li>
+                <li>Implemented Socket.io for real-time data updates and notifications across the platform</li>
+              </ul>
+            </div>
             <div class="tag-row">
               <span class="tag">React 18</span>
               <span class="tag">TypeScript</span>
@@ -115,11 +155,32 @@
           </div>
         </article>
 
-        <article class="project-card card reveal">
+        <article class="project-card card reveal" id="myticketpartner">
           <div class="project-card__media project-card__media--3"><span>MyTicketPartner</span></div>
           <div class="project-card__body">
-            <h3>MyTicketPartner — White-Label Event Ticketing Platform</h3>
-            <p>A white-label SaaS platform enabling organizations to create, manage, and promote events under their own branding — with a multi-step event creation wizard, Stripe-powered checkout, and a data-rich organizer dashboard.</p>
+            <div class="case-study__header">
+              <h3>MyTicketPartner — White-Label Event Ticketing Platform</h3>
+              <span class="case-study__badge">Private Client Project</span>
+            </div>
+            <div class="case-study__section">
+              <h4>Challenge</h4>
+              <p>Build a white-label SaaS platform so organizations could run fully-branded event ticketing under their own domain — covering ticket tiers, seating, payments, refunds, and marketing tools.</p>
+            </div>
+            <div class="case-study__section">
+              <h4>My Role</h4>
+              <p>Built the white-label architecture and the core booking/checkout flow, plus the organizer-facing analytics dashboard.</p>
+            </div>
+            <div class="case-study__section case-study__achievements">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Built a scalable white-label architecture using Next.js dynamic routing so organizations could host branded event pages under custom domains</li>
+                <li>Built a multi-step Event Creation Wizard (ticket tiers/pricing, venue/seating layouts, tax &amp; payout configuration, promo codes/discounts)</li>
+                <li>Implemented a secure Stripe checkout handling tiered pricing, taxes, and timed cart reservation</li>
+                <li>Built the Organization Dashboard for tracking sales, managing attendees, processing refunds, and visualizing earnings via ECharts</li>
+                <li>Added a Ticket Wallet, peer-to-peer ticket transfers, and automated refund workflows for end users</li>
+                <li>Optimized performance and SEO with Next.js SSR/SSG, plus multi-language support (i18n) for a global audience</li>
+              </ul>
+            </div>
             <div class="tag-row">
               <span class="tag">Next.js</span>
               <span class="tag">TypeScript</span>
@@ -131,11 +192,32 @@
           </div>
         </article>
 
-        <article class="project-card card reveal">
+        <article class="project-card card reveal" id="cred-iq">
           <div class="project-card__media project-card__media--4"><span>CRED-iQ</span></div>
           <div class="project-card__body">
-            <h3>CRED-iQ — Financial Data Visualization Platform</h3>
-            <p>An enterprise-grade React application for financial data visualization and geospatial analytics in commercial real estate, with type-safe GraphQL, RxJS-driven async flows, and Auth0-secured role-based access.</p>
+            <div class="case-study__header">
+              <h3>CRED-iQ — Financial Data Visualization Platform</h3>
+              <span class="case-study__badge">Private Client Project</span>
+            </div>
+            <div class="case-study__section">
+              <h4>Challenge</h4>
+              <p>Build an enterprise-grade tool for analyzing commercial real estate financial data with heavy geospatial mapping and real-time analytics, where frontend/API type mismatches were a recurring source of bugs.</p>
+            </div>
+            <div class="case-study__section">
+              <h4>My Role</h4>
+              <p>Owned the frontend architecture — type-safety tooling, async data flows, the design system, and secured access control.</p>
+            </div>
+            <div class="case-study__section case-study__achievements">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Integrated GraphQL Code Generator to auto-sync TypeScript interfaces with the API schema, <strong>reducing runtime errors by 40%</strong></li>
+                <li>Implemented Redux Observable (RxJS) middleware for complex async flows — concurrent fetching, cancellation, debouncing</li>
+                <li>Designed a scalable folder structure separating components, state (epics/reducers), and GraphQL queries for long-term maintainability</li>
+                <li>Configured automated multi-environment (Dev/UAT/Live) deployment pipelines via AWS CLI to S3 and CloudFront</li>
+                <li>Built a consistent design system with Material UI and BlueprintJS</li>
+                <li>Implemented Role-Based Access Control (RBAC) and secure authentication via Auth0</li>
+              </ul>
+            </div>
             <div class="tag-row">
               <span class="tag">React</span>
               <span class="tag">TypeScript</span>
@@ -181,6 +263,7 @@
   </div>
 </footer>
 
+<script data-goatcounter="https://vijaychouhan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

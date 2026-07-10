@@ -202,6 +202,7 @@ section.tight { padding-block: var(--space-xl); }
 .hero {
   padding-block: var(--space-2xl) var(--space-xl);
   position: relative;
+  overflow: hidden; /* contains the ::before glow, which intentionally bleeds past the hero's edges */
 }
 .hero::before {
   content: '';
@@ -499,9 +500,13 @@ section.tight { padding-block: var(--space-xl); }
 /* ---------- Projects ---------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
 }
+/* Compact 3-up variant for the homepage "featured work" teaser */
+.project-grid--compact { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1024px) { .project-grid--compact { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .project-grid--compact { grid-template-columns: 1fr; } }
 .project-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
 .project-card__media {
   height: 170px;
@@ -553,6 +558,45 @@ section.tight { padding-block: var(--space-xl); }
   gap: 4px;
 }
 .project-card__links a:hover { text-decoration: underline; }
+
+/* Full case-study layout (projects.html) */
+.case-study__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.case-study__badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.case-study__section h4 {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-3xs);
+  color: var(--text-primary);
+}
+.case-study__section p { font-size: 0.95rem; }
+.case-study__achievements ul { display: grid; gap: var(--space-2xs); margin-top: var(--space-3xs); }
+.case-study__achievements li {
+  position: relative;
+  padding-left: var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.case-study__achievements li::before {
+  content: '';
+  position: absolute; left: 0; top: 0.6em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 
 /* ---------- Contact ---------- */
 .contact-grid {
@@ -627,7 +671,6 @@ section.tight { padding-block: var(--space-xl); }
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {

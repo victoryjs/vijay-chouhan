@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://victoryjs.github.io/vijay-chouhan/sitemap.xml

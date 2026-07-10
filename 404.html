@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (e) { /* storage unavailable */ }
+    var t = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<title>Page Not Found | Vijay Chouhan</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/images/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/images/icons/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">Vijay<span>.</span>Chouhan</a>
+    <nav class="navbar__nav" id="primary-nav">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="education.html" data-page="education">Education</a></li>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" style="padding-block: var(--space-2xl);">
+    <div class="container reveal">
+      <p class="eyebrow">404</p>
+      <h1>This page doesn't exist</h1>
+      <p>The link you followed may be broken, or the page may have moved. Let's get you back on track.</p>
+      <div class="btn-row" style="justify-content: center; margin-top: var(--space-lg);">
+        <a href="index.html" class="btn btn--primary">Back to Home</a>
+        <a href="contact.html" class="btn btn--ghost">Contact Me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">Vijay Chouhan<span class="dot">.</span></div>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer__copy">&copy; <span id="year">2026</span> Vijay Chouhan. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

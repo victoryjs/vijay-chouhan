@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Design tokens — colors, type, spacing. Theme switched via [data-theme] on <html>.
+   ========================================================================== */
+
+:root {
+  /* Typography */
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  /* Spacing scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --container-width: 1140px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s var(--ease);
+  --transition-med: 0.4s var(--ease);
+  --transition-slow: 0.7s var(--ease);
+
+  /* Accent gradient — stays vibrant in both themes (used on button/badge
+     backgrounds with dark contrast text, never as text-on-page color) */
+  --accent-bright: #2dd4bf;
+  --accent-bright-2: #22d3ee;
+  --accent-gradient: linear-gradient(135deg, var(--accent-bright-2), var(--accent-bright));
+  --accent-contrast: #04141a;
+}
+
+/* ---------- Dark theme (default) ---------- */
+:root,
+:root[data-theme='dark'] {
+  --bg: #0a0f1a;
+  --bg-alt: #0d1420;
+  --surface: #121a2b;
+  --surface-alt: #182338;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text-primary: #e7ebf3;
+  --text-secondary: #9aa7bd;
+  --text-muted: #6b7688;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 34px rgba(0, 0, 0, 0.45);
+  --overlay-tint: rgba(45, 212, 191, 0.08);
+  /* --accent is used as foreground (text/icon) color — must stay
+     WCAG-AA readable (>=4.5:1) against --bg/--surface in each theme */
+  --accent: #2dd4bf;
+  --accent-2: #22d3ee;
+}
+
+/* ---------- Light theme ---------- */
+:root[data-theme='light'] {
+  --bg: #f7f9fc;
+  --bg-alt: #eef2f7;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f9;
+  --border: rgba(15, 23, 42, 0.09);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --text-primary: #10192b;
+  --text-secondary: #4b5871;
+  --text-muted: #7c8aa0;
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 16px 34px rgba(15, 23, 42, 0.1);
+  --overlay-tint: rgba(15, 118, 110, 0.07);
+  /* Darker teal/cyan than the bright accent — #2dd4bf only hits 1.86:1
+     on white (fails WCAG AA); #0f766e hits 5.47:1 */
+  --accent: #0f766e;
+  --accent-2: #0e7490;
+}

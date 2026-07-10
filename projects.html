@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (e) { /* storage unavailable */ }
+    var t = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<title>Projects | Vijay Chouhan</title>
+<meta name="description" content="Selected projects by Vijay Chouhan spanning PropTech, SaaS, event-ticketing, and FinTech platforms.">
+<link rel="canonical" href="https://victoryjs.github.io/vijay-chouhan/projects.html">
+<meta name="theme-color" content="#0a0f1a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://victoryjs.github.io/vijay-chouhan/projects.html">
+<meta property="og:title" content="Projects | Vijay Chouhan">
+<meta property="og:description" content="Selected projects by Vijay Chouhan spanning PropTech, SaaS, event-ticketing, and FinTech platforms.">
+<meta property="og:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/profile/vijay-chouhan.jpeg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Projects | Vijay Chouhan">
+<meta name="twitter:description" content="Selected projects by Vijay Chouhan spanning PropTech, SaaS, event-ticketing, and FinTech platforms.">
+<meta name="twitter:image" content="https://victoryjs.github.io/vijay-chouhan/assets/images/profile/vijay-chouhan.jpeg">
+<link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/images/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/images/icons/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="projects">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">Vijay<span>.</span>Chouhan</a>
+    <nav class="navbar__nav" id="primary-nav">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="education.html" data-page="education">Education</a></li>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar__actions">
+      <a href="assets/resume/vijay-chouhan-resume.pdf" class="btn btn--ghost btn--sm resume-link" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Resume</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container reveal">
+      <p class="eyebrow">Projects</p>
+      <h1>Selected work</h1>
+      <p>A look at production platforms I've architected and built across PropTech, SaaS, event-ticketing, and FinTech.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="container">
+      <div class="project-grid">
+
+        <article class="project-card card reveal">
+          <div class="project-card__media project-card__media--1"><span>Habitake</span></div>
+          <div class="project-card__body">
+            <h3>Habitake — Cloud-Native Property Management Ecosystem</h3>
+            <p>A high-performance, cloud-native property management and social ecosystem built on AWS using a serverless microservices architecture, with Google Gemini generative AI for image creation.</p>
+            <div class="tag-row">
+              <span class="tag">Rust</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">AWS Lambda</span>
+              <span class="tag">AppSync</span>
+              <span class="tag">DynamoDB</span>
+              <span class="tag">Cognito</span>
+              <span class="tag">Google Gemini</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card reveal">
+          <div class="project-card__media project-card__media--2"><span>Sootra</span></div>
+          <div class="project-card__body">
+            <h3>Sootra — SaaS Platform &amp; Admin Dashboard</h3>
+            <p>A scalable dual-frontend web application featuring a user-facing productivity portal and a robust admin dashboard, with Monaco Editor and GrapesJS integrations plus real-time updates via Socket.io.</p>
+            <div class="tag-row">
+              <span class="tag">React 18</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Redux Toolkit</span>
+              <span class="tag">React Query</span>
+              <span class="tag">MUI v6</span>
+              <span class="tag">Monaco Editor</span>
+              <span class="tag">Socket.io</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card reveal">
+          <div class="project-card__media project-card__media--3"><span>MyTicketPartner</span></div>
+          <div class="project-card__body">
+            <h3>MyTicketPartner — White-Label Event Ticketing Platform</h3>
+            <p>A white-label SaaS platform enabling organizations to create, manage, and promote events under their own branding — with a multi-step event creation wizard, Stripe-powered checkout, and a data-rich organizer dashboard.</p>
+            <div class="tag-row">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">ECharts</span>
+              <span class="tag">SSR / SSG</span>
+              <span class="tag">i18n</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card reveal">
+          <div class="project-card__media project-card__media--4"><span>CRED-iQ</span></div>
+          <div class="project-card__body">
+            <h3>CRED-iQ — Financial Data Visualization Platform</h3>
+            <p>An enterprise-grade React application for financial data visualization and geospatial analytics in commercial real estate, with type-safe GraphQL, RxJS-driven async flows, and Auth0-secured role-based access.</p>
+            <div class="tag-row">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">GraphQL Codegen</span>
+              <span class="tag">Redux Observable</span>
+              <span class="tag">Material UI</span>
+              <span class="tag">Auth0</span>
+              <span class="tag">AWS CLI</span>
+              <span class="tag">CloudFront</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">Vijay Chouhan<span class="dot">.</span></div>
+    <p class="footer__tagline">Senior Software Developer crafting scalable, high-performance web experiences.</p>
+    <div class="footer__socials">
+      <a class="social-btn" href="https://github.com/victoryjs" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.5 0 12.3c0 5.43 3.44 10.03 8.2 11.66.6.11.82-.27.82-.6 0-.3-.01-1.08-.02-2.12-3.34.74-4.04-1.65-4.04-1.65-.55-1.42-1.33-1.8-1.33-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.84 1.26 1.84 1.26 1.07 1.86 2.8 1.32 3.49 1.01.11-.79.42-1.32.76-1.63-2.67-.31-5.47-1.36-5.47-6.03 0-1.33.46-2.42 1.23-3.28-.12-.31-.53-1.55.12-3.24 0 0 1-.33 3.3 1.25a11.2 11.2 0 0 1 6 0c2.3-1.58 3.3-1.25 3.3-1.25.65 1.69.24 2.93.12 3.24.77.86 1.23 1.95 1.23 3.28 0 4.68-2.8 5.71-5.48 6.02.43.38.81 1.12.81 2.27 0 1.64-.02 2.96-.02 3.36 0 .33.22.72.83.6C20.56 22.32 24 17.73 24 12.3 24 5.5 18.63 0 12 0z"/></svg>
+      </a>
+      <a class="social-btn" href="https://www.linkedin.com/in/victoryjs/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a class="social-btn" href="mailto:er.vijaychouhan88@gmail.com" aria-label="Send email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer__copy">&copy; <span id="year">2026</span> Vijay Chouhan. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

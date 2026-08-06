@@ -503,10 +503,8 @@ section.tight { padding-block: var(--space-xl); }
   grid-template-columns: 1fr;
   gap: var(--space-lg);
 }
-/* Compact 3-up variant for the homepage "featured work" teaser */
-.project-grid--compact { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 1024px) { .project-grid--compact { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .project-grid--compact { grid-template-columns: 1fr; } }
+/* Compact variant for the homepage "featured work" teaser; auto-fits 3-5 cards responsively */
+.project-grid--compact { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .project-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
 .project-card__media {
   height: 170px;
@@ -522,6 +520,8 @@ section.tight { padding-block: var(--space-xl); }
 .project-card__media--2 { background: linear-gradient(135deg, #a78bfa, #818cf8); }
 .project-card__media--3 { background: linear-gradient(135deg, #fbbf24, #fb923c); }
 .project-card__media--4 { background: linear-gradient(135deg, #60a5fa, #38bdf8); }
+.project-card__media--5 { background: linear-gradient(135deg, #34d399, #10b981); }
+.project-card__media--6 { background: linear-gradient(135deg, #fb7185, #f97316); }
 .project-card__media::before {
   content: '';
   position: absolute; inset: 0;
@@ -577,6 +577,16 @@ section.tight { padding-block: var(--space-xl); }
   color: var(--text-muted);
   white-space: nowrap;
 }
+/* Badge variant for live/public projects: an actual link instead of a static "Private Client Project" label */
+.case-study__badge--link {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.case-study__badge--link:hover { text-decoration: underline; }
 .case-study__section h4 {
   font-size: 0.95rem;
   margin-bottom: var(--space-3xs);

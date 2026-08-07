@@ -53,7 +53,7 @@
       </ul>
     </nav>
     <div class="navbar__actions">
-      <a href="assets/resume/vijay-chouhan-resume.pdf" class="btn btn--ghost btn--sm resume-link" download>
+      <a href="assets/resume/vijay_chouhan_resume.pdf" class="btn btn--ghost btn--sm resume-link" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span>Resume</span>
       </a>
@@ -73,7 +73,7 @@
     <div class="container reveal">
       <p class="eyebrow">Projects</p>
       <h1>Selected work</h1>
-      <p>A look at production platforms I've architected and built across PropTech, SaaS, event-ticketing, FinTech — plus independent AI and gaming products I've shipped solo.</p>
+      <p>A look at production platforms I've architected and built across PropTech, SaaS, event-ticketing, FinTech — plus independent AI, gaming, and browser-extension products I've shipped solo.</p>
     </div>
   </section>
 
@@ -295,6 +295,41 @@
               <span class="tag">Node.js</span>
               <span class="tag">Tailwind CSS</span>
               <span class="tag">Vercel</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card reveal" id="adblock-shield">
+          <div class="project-card__media project-card__media--7"><span>AdBlock Shield</span></div>
+          <div class="project-card__body">
+            <div class="case-study__header">
+              <h3>AdBlock Shield — Cross-Browser Ad-Blocking Extension</h3>
+              <a class="case-study__badge case-study__badge--link" href="https://victoryjs.github.io/ads-blockers/" target="_blank" rel="noopener">Visit live site ↗</a>
+            </div>
+            <div class="case-study__section">
+              <h4>Challenge</h4>
+              <p>Build a free browser extension that blocks display ads and skips YouTube video ads across both Chrome and Firefox from one codebase, with a low-cost Premium tier funded by real payments rather than a placeholder paywall.</p>
+            </div>
+            <div class="case-study__section">
+              <h4>My Role</h4>
+              <p>Independent project — designed and built the full extension end-to-end for both browsers, including the network-level blocking engine, content-script cosmetic hiding, and the Premium payments integration.</p>
+            </div>
+            <div class="case-study__section case-study__achievements">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Built network-level ad blocking across ~140 curated ad-network domains using Chrome's Manifest V3 declarativeNetRequest API and Firefox's webRequest blocking listener</li>
+                <li>Built a content-script cosmetic-hiding layer with a MutationObserver to catch ads injected after page load, plus YouTube ad auto-skip, mute, and fast-forward</li>
+                <li>Kept a single shared source for content and popup logic with a Node build script that regenerates the Chrome and Firefox blocklists from one list</li>
+                <li>Integrated real Stripe-backed payments via ExtensionPay for a Premium tier (cookie-consent blocking, distraction control, image swap) with monthly, yearly, and lifetime plans</li>
+                <li>Published a GitHub Pages landing site presenting the extension's features, free-vs-Premium comparison, and install instructions</li>
+              </ul>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Chrome Extension (MV3)</span>
+              <span class="tag">Firefox WebExtensions</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">declarativeNetRequest</span>
+              <span class="tag">Stripe / ExtensionPay</span>
             </div>
           </div>
         </article>

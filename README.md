@@ -58,7 +58,7 @@ python3 -m http.server 8000
 ## Updating content
 
 - Swap `assets/images/profile/vijay-chouhan.jpeg` for a new photo (keep the same filename, or update the `<img src>` in each page's hero — there are two: `index.html` and `about.html`).
-- Replace `assets/resume/vijay-chouhan-resume.pdf` with an updated resume (keep the same filename so the download buttons keep working).
+- Replace `assets/resume/vijay_chouhan_resume.pdf` with an updated resume (keep the same filename so the download buttons keep working).
 - Project cards in `projects.html` currently use styled placeholder banners instead of screenshots — drop images into `assets/images/projects/` and swap the `.project-card__media` markup to an `<img>` when real screenshots are available.
 - If any project ever gets a public live URL, add a `.project-card__links` row (see the pattern already used on the homepage's featured-work cards) with a "Visit live site ↗" link inside the matching case study in `projects.html`.
 - `assets/images/og-banner.png` (1200×630, the image shown when the site is shared on WhatsApp/LinkedIn/Twitter) is a pre-rendered binary asset, not hand-editable — regenerate it (a headless-Chrome screenshot of a small HTML template is the fastest way) if the name, title, or photo changes.
@@ -76,7 +76,7 @@ The site pings [GoatCounter](https://www.goatcounter.com/) (a free, cookieless, 
 
 ## Owner TODO (not fixed by this pass)
 
-- **Regenerate the resume PDF.** The current `assets/resume/vijay-chouhan-resume.pdf` contains a stray instruction-like line under the MyTicketPartner project ("Highlight 'Telehealth'...") that reads like leftover prompt-injection text, not real resume content. It was intentionally *not* reflected on the site, but it's still visible to anyone who downloads the PDF — please regenerate the PDF without that line.
+- **Regenerate the resume PDF.** The current `assets/resume/vijay_chouhan_resume.pdf` contains a stray instruction-like line under the MyTicketPartner project ("Highlight 'Telehealth'...") that reads like leftover prompt-injection text, not real resume content. It was intentionally *not* reflected on the site, but it's still visible to anyone who downloads the PDF — please regenerate the PDF without that line.
 - **Add real project screenshots and links.** `projects.html` cards use styled gradient placeholders and omit live-demo/GitHub links because none were provided (these are client/employer projects, so links may not be public). Add real screenshots to `assets/images/projects/` and links if you have permission to share them.
 - **Collect testimonials.** Reviewers consistently say testimonials/recommendations add credibility that project lists alone can't. If you have (or can ask past managers/clients/colleagues for) 1-3 short quotes — a LinkedIn recommendation is perfect — send them over and a testimonials section can be added to `about.html` or `index.html`.
 - **Verify GoatCounter is receiving data.** Register at goatcounter.com with site code `vijaychouhan` (see "Analytics" above) if you haven't already, then check `https://vijaychouhan.goatcounter.com` after a few real visits.
